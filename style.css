@@ -3,7 +3,7 @@ body {
 	background: url("background.png");
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 	font: 1.2em 'Roboto', sans-serif;
 	font-weight: 300;
 	color: #FFF;
