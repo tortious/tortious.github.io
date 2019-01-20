@@ -6,7 +6,7 @@ body {
 	background-size: cover;
 	font: 1.2em 'Roboto', sans-serif;
 	font-weight: 300;
-	color: #FFF;
+	color: #2ef999;
 	}
 .preload {
 	transition: none;
@@ -29,7 +29,7 @@ li {
 	height: 24px;
 	}
 li:hover {
-	background: #EEE;
+	background: #1a1a1a;
 	box-shadow: 0 0 6px #FFF;
 	transition: 0.15s linear;
 	}
@@ -97,9 +97,9 @@ td a {
 	line-height: 25px;
 	}
 td:hover a {
-	background: #EEE;
+	background: #2a2a2a;
 	box-shadow: 0 0 4px #FFF;
-	color: #000;
+	color: #00efef;
 	transition: 0.15s linear;
 	}
 td {
