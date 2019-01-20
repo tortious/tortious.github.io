@@ -1,8 +1,8 @@
 /* Body */
 body {
 	background: url("wallhaven-550411.png");
-	background-position: center;
-	background-repeat: no-repeat;
+	/*background-position: center;
+	background-repeat: no-repeat; */
 	background-size: cover;
 	font: 1.2em 'Roboto', sans-serif;
 	font-weight: 300;
