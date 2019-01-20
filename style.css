@@ -1,6 +1,8 @@
 /* Body */
 body {
 	background: url("background.png");
+	width: 100%;
+	height: 100%;
 	font: 1.2em 'Roboto', sans-serif;
 	font-weight: 300;
 	color: #FFF;
