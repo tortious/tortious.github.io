@@ -45,7 +45,7 @@ a {
 	cursor: default;
 	}
 a:hover {
-	color: #000;
+	color: #66cf66;
 	transition: 0.15s linear;
 	}
 
@@ -70,7 +70,7 @@ a:hover {
 	margin: 0 0 0 0;
 	font: 1.5em 'Roboto Condensed', sans-serif;
 	text-align: center;
-	border-bottom: 1px #80bfff solid;
+	border-bottom: 1px #00efef solid;
 	}
 
 
