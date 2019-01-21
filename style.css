@@ -40,7 +40,7 @@ li a {
 a {
 	display: block;
 	width: 100%;
-	color: #FFF;
+	color: #cc99ff;
 	text-decoration: none;
 	cursor: default;
 	}
@@ -70,7 +70,7 @@ a:hover {
 	margin: 0 0 0 0;
 	font: 1.5em 'Roboto Condensed', sans-serif;
 	text-align: center;
-	border-bottom: 1px #FFF solid;
+	border-bottom: 1px #66c2ff solid;
 	}
 
 
