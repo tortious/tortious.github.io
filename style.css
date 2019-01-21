@@ -6,7 +6,7 @@ body {
 	background-size: cover;
 	font: 1.2em 'Roboto', sans-serif;
 	font-weight: 300;
-	color: #000;
+	color: #2ff785;
 	}
 .preload {
 	transition: none;
@@ -40,12 +40,12 @@ li a {
 a {
 	display: block;
 	width: 100%;
-	color: #cc99ff;
+	color: #00ffef;
 	text-decoration: none;
 	cursor: default;
 	}
 a:hover {
-	color: #000;
+	color: #00ffef;
 	transition: 0.15s linear;
 	}
 
@@ -70,7 +70,7 @@ a:hover {
 	margin: 0 0 0 0;
 	font: 1.5em 'Roboto Condensed', sans-serif;
 	text-align: center;
-	border-bottom: 1px #66c2ff solid;
+	border-bottom: 1px #80bfff solid;
 	}
 
 
