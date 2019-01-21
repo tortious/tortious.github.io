@@ -30,7 +30,7 @@ li {
 	}
 li:hover {
 	background: #1a1a1a;
-	box-shadow: 0 0 6px #66c2ff;
+	box-shadow: 0 0 6px #FFF;
 	transition: 0.15s linear;
 	}
 li a {
