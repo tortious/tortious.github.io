@@ -29,8 +29,8 @@ li {
 	height: 24px;
 	}
 li:hover {
-	background: #1a1a1a;
-	box-shadow: 0 0 6px #FFF;
+	background: #000;
+	box-shadow: 0 0 6px #333;
 	transition: 0.15s linear;
 	}
 li a {
