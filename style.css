@@ -29,7 +29,7 @@ li {
 	height: 24px;
 	}
 li:hover {
-	background: #000;
+	background: #1c1c1d;
 	box-shadow: 0 0 6px #333;
 	transition: 0.15s linear;
 	}
