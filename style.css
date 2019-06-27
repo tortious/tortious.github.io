@@ -19,21 +19,22 @@
 
 body{
 	background: url("11bg.png") no-repeat #161616 fixed;
-	background-position: center !important;
+	background-position: center;
+	/* background-repeat: no-repeat;*/
 	background-size: cover;
 }
 
 #logo{
-	width:880px;
+	width:860px;
 	height:150px;
-	margin:150px auto 0;
+	margin:100px auto 0;
 }
 
 #logo h1{
 	text-align:center;
-	font-size: 60px;
-	padding: 20px 0 0 0;
-	font-family: Anonymous Pro !important;
+	font-size: 55px;
+	padding: 10px 0 0 0;
+	font-family: Helvetica !important;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -53,18 +54,18 @@ body{
 	max-width: 115px;
 	height: auto;
 	max-height: 50px;
-	padding-bottom: 15px;
+	padding-bottom: 10px;
 }
 
 
 .img-box p{
-	padding-bottom:2px;
-	font-size: 14px;
-	color: #87cefa;
-	padding-top: 10px;
-    letter-spacing:0.07em;
+	padding-bottom:5px;
+	font-size: 16px;
+    font-family: Cousine !important;
+	color: #87cefa !important;
+	font-weight: bold;
+    letter-spacing:0.06em;
 	text-transform:uppercase;
-	font-family:  "Cousine for Powerline" !important;
 }
 
 
@@ -98,7 +99,7 @@ BOXES START
 *************/
 
 .boxes{
-	width:850px;
+	width:880px;
 	height:200px;
 	margin:0px auto;
 }
@@ -108,10 +109,10 @@ BOXES START
     height: 150px;
     overflow: hidden;
     float: left;
-    margin: 20px 10px;
+    margin: 0 10px;
     background: #0E0E0E;
     border-radius: 3px;
-    padding: 0px;
+    padding: 5px;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
@@ -120,8 +121,8 @@ BOXES START
     border-color: rgb(57, 57, 57);
 }
 .box-content, .box-content a{
-	font-size:0.90em;
-	font-family:helvetica;
+	font-size:0.78em;
+	font-family: Cousine for Powerline;
 	letter-spacing:0.02em;
 }
 
@@ -184,9 +185,9 @@ OTHER BOXES
 	-webkit-transition: 0.3s;
 	-o-transition: 0.3s;
 	transition: 0.3s;
-	height:250px;
+	height:300px;
 	/* if you want to expand boxes only to the bottom, delete the line below (just margin-top) */
-	margin-top:-60px;
+	margin-top:-50px;
 	border-width: 5px 0;
     border-style: solid;
     border-color: #377992;
@@ -255,3 +256,4 @@ OTHER BOXES
 .other-links ul:hover li a{
 	display: block!important;
 }
+					
