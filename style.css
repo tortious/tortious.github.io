@@ -1,135 +1,255 @@
-/* Body */
-body {
-	background: url("background1.png");
-	/*background-position: center;
-	background-repeat: no-repeat; */
-	background-size: cover;
-	font: 1.2em 'Roboto', sans-serif;
-	font-weight: 300;
-	color: #2ff785;
-	}
-.preload {
-	transition: none;
-	}
-h1 {
-	font: 4.0em 'Lobster', cursive;
-	text-align: center;
-	}
+/*
+	Theme Name: retro-rain
+	Author: Eyup Can Elma
+	Website: https://elma.pw
+	Date: x.x.2016
+*/
+
+@font-face {
+	font-family: "Beef'd";
+	src: url("../font/Beef'd.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "COMPUTERRobot";
+	src: url("../font/COMPUTERRobot.ttf") format("truetype");
+}
 
 
-/* Links */
-ul {
-	list-style-type: none;
-	margin-top: 8px;
-	padding-left: 0;
-	}
-li {
-	padding-left: 16px;
-	border-radius: 20px;
-	height: 24px;
-	}
-li:hover {
-	background: #1c1c1d;
-	box-shadow: 0 0 6px #333;
-	transition: 0.15s linear;
-	}
-li a {
-	margin-left: -16px;
-	padding: 0 8px;
-	}
-a {
-	display: block;
-	width: 100%;
-	color: #11acff;
-	text-decoration: none;
-	cursor: default;
-	}
-a:hover {
-	color: #11acff;
-	transition: 0.15s linear;
-	}
+
+body{
+	color: #ccc;
+	background: url(../img/bg.jpg) no-repeat #161616 fixed;
+	background-position: right -100px bottom;
+}
+
+#logo{
+	width:860px;
+	height:150px;
+	margin:100px auto 0;
+}
+
+#logo h1{
+	text-align:center;
+	font-size: 20px;
+	padding: 40px 0 0 0;
+	font-family: "Beef'd", Ubuntu!important;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#logo h1 span{
+	color:#666;
+}
+
+/* the image of the box */
+.img-box{
+	text-align:center;
+	margin-top:15px;
+}
+
+.img-box img{
+	width:auto;
+	max-width: 115px;
+	height: auto;
+	max-height: 30px;
+	padding-bottom: 15px;
+}
 
 
-/* Containers */
-#boxes {
-	width: 99%;
-	margin: 0 1%;
-	}
-.box {
-	float: left;
-	width: 18%;
-	margin: 0 3px;
-	opacity: 0.5;
-	transition: 0.15s linear;
-	}
-.box:hover, .sbox:hover {
-	opacity: 1.0;
-	transition: 0.15s linear;
-	}
-.box h4, .sbox h4 {
-	margin: 0 0 0 0;
-	font: 1.5em 'Roboto Condensed', sans-serif;
-	text-align: center;
-	border-bottom: 1px #00efef solid;
-	}
+.img-box p{
+	padding-bottom:5px;
+	font-size: 25px;
+    font-family: 'COMPUTERRobot', Ubuntu;
+    letter-spacing:0.06em;
+	text-transform:uppercase;
+}
 
 
-/* Search Boxes */
-.sbox {
-	float: left;
-	width: 25%;
-	margin: 0 3px;
-	opacity: 0.9;
-	transition: 0.15s linear;
-	}
-#search {
-	width: 100%;
-	margin-top: 8px;
-	border-spacing: 1px;
-	}
-form {
-	height: 25px;
-	}
-td a {
-	font-size: 1.2em;
-	font-weight: 300;
-	border-radius: 20px;
-	line-height: 25px;
-	}
-td:hover a {
-	background: #2a2a2a;
-	box-shadow: 0 0 4px #FFF;
-	color: #00efef;
-	transition: 0.15s linear;
-	}
-td {
-	padding: 0 0 0 0;
-	min-height: 25px;
-	max-height: 25px;
-	margin-top: -2px;
-	}
-td:nth-child(1) {
-	float: left;
-	width: 30%;
-	text-align: center;
-	}
-td:nth-child(2) {
-	float: right;
-	width: 65%;
-	}
-input {
-	height: 20px;
-	width: 80%;
-	margin-top: 2px;
-	padding: 0 0 0 8px;
-	border: none;
-	border-radius: 20px;
-	opacity: 0.8;
-	cursor: default;
-	transition: 0.15s linear;
-	}
-input:hover, input:focus {
-	width: 100%;
-	opacity: 1.0;
-	box-shadow: 0 0 4px #FFF;
-	}
+ul.link-box{
+	padding: 0;
+	text-align:center;
+	opacity:0.0;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+
+li.link-item{
+	list-style:none;
+	display:inline-block;
+	padding: 1px 5px;
+	min-width:50px;
+}
+
+li.link-item a.linka{
+	color:#ababab;
+	text-decoration:none;
+}
+
+li.link-item:hover a.linka{
+	text-decoration:underline;
+}
+
+/************
+BOXES START
+*************/
+
+.boxes{
+	width:870px;
+	height:200px;
+	margin:0px auto;
+}
+
+.boxy{
+    width: 115px;
+    height: 130px;
+    overflow: hidden;
+    float: left;
+    margin: 0 10px;
+    background: #0E0E0E;
+    border-radius: 3px;
+    padding: 5px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    border-width: 5px 0;
+    border-style: solid;
+    border-color: rgb(57, 57, 57);
+}
+.box-content, .box-content a{
+	font-size:0.78em;
+	font-family:'Ubuntu', Trebuchet;
+	letter-spacing:0.02em;
+}
+
+/* box 1: search box; */
+#box-content-1{
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	margin-top:5px;
+}
+
+div#boxy-1:hover {
+    border-color: #377992;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+/* search box for the first box */
+.search-box{
+	padding:0;
+	margin:0 -1px 0 -5px;
+	color:#666;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.search-box input{
+    width: 100%;
+    padding: 6px 0;
+    margin: 2px 0;
+    background: #171717;
+    border-color: transparent;
+    color: #666;
+    font-size:0.7em;
+    text-align:center;
+    outline:none;
+}
+
+/**********
+OTHER BOXES
+***********/
+#box-content-2, #box-content-3, #box-content-4, #box-content-5, #box-content-6{
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	margin-top:50px;
+}
+
+#boxy-2:hover #box-content-2, #boxy-2:hover #box-content-2 ul, #boxy-3:hover #box-content-3, #boxy-3:hover #box-content-3 ul, #boxy-4:hover #box-content-4, #boxy-4:hover #box-content-4 ul, #boxy-5:hover #box-content-5, #boxy-5:hover #box-content-5 ul, #boxy-6:hover #box-content-6, #boxy-6:hover #box-content-6 ul{
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	opacity:1;
+	margin:0;
+}
+
+#boxy-2:hover, #boxy-3:hover, #boxy-4:hover, #boxy-5:hover , #boxy-6:hover {
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	height:250px;
+	/* if you want to expand boxes only to the bottom, delete the line below (just margin-top) */
+	margin-top:-60px;
+	border-width: 5px 0;
+    border-style: solid;
+    border-color: #377992;
+}
+
+/************
+   BOXES END
+*************/
+
+
+/******************
+  SELECTIONS START
+*******************/
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color:    #666;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #666;
+   opacity:  1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #666;
+   opacity:  1;
+}
+
+::selection {
+  background: transparent; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: transparent; /* Gecko Browsers */
+}
+
+/******************
+  SELECTIONS END
+*******************/
+
+/******************
+	   OTHERS
+*******************/
+
+.other-links {
+	position: absolute;
+	bottom: 0;
+}
+
+.other-links a{
+	color: #555;
+	font-size: 9px;
+	display: none;
+}
+
+.other-links li:hover a{
+	color: #ccc;
+}
+
+.other-links ul {
+	list-style: none;
+	height: 60px;
+	width: 60px;
+	padding-top: 30px;
+}
+
+.other-links ul:hover li a{
+	display: block!important;
+}
