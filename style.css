@@ -103,8 +103,8 @@ BOXES START
 }
 
 .boxy{
-    width: 115px;
-    height: 130px;
+    width: 175px;
+    height: 225px;
     overflow: hidden;
     float: left;
     margin: 0 10px;
@@ -183,7 +183,7 @@ OTHER BOXES
 	-webkit-transition: 0.3s;
 	-o-transition: 0.3s;
 	transition: 0.3s;
-	height:250px;
+	height:500px;
 	/* if you want to expand boxes only to the bottom, delete the line below (just margin-top) */
 	margin-top:-60px;
 	border-width: 5px 0;
