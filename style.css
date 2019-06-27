@@ -97,14 +97,14 @@ BOXES START
 *************/
 
 .boxes{
-	width:1000px;
-	height:500px;
+	width:850px;
+	height:200px;
 	margin:0px auto;
 }
 
 .boxy{
-    width: 115px;
-    height: 130px;
+    width: 175px;
+    height: 225px;
     overflow: hidden;
     float: left;
     margin: 0 10px;
