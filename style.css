@@ -21,6 +21,8 @@ body{
 	color: #ccc;
 	background: url(../img/11bg.png) no-repeat #161616 fixed;
 	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #logo{
