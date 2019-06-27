@@ -18,23 +18,22 @@
 
 
 body{
-	background: url("11bg.png") no-repeat #161616 fixed !important;
-	background-position: center;
-	/* background-repeat: no-repeat;*/
+	background: url("11bg.png") no-repeat #161616 fixed;
+	background-position: center !important;
 	background-size: cover;
 }
 
 #logo{
-	width:860px;
+	width:880px;
 	height:150px;
-	margin:100px auto 0;
+	margin:150px auto 0;
 }
 
 #logo h1{
 	text-align:center;
-	font-size: 55px;
+	font-size: 60px;
 	padding: 20px 0 0 0;
-	font-family: "Beef'd", Ubuntu!important;
+	font-family: Anonymous Pro !important;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -53,17 +52,19 @@ body{
 	width:auto;
 	max-width: 115px;
 	height: auto;
-	max-height: 30px;
+	max-height: 50px;
 	padding-bottom: 15px;
 }
 
 
 .img-box p{
-	padding-bottom:5px;
-	font-size: 25px;
-    font-family: 'COMPUTERRobot', Ubuntu;
-    letter-spacing:0.06em;
+	padding-bottom:2px;
+	font-size: 14px;
+	color: #87cefa;
+	padding-top: 10px;
+    letter-spacing:0.07em;
 	text-transform:uppercase;
+	font-family:  "Cousine for Powerline" !important;
 }
 
 
@@ -103,14 +104,14 @@ BOXES START
 }
 
 .boxy{
-    width: 175px;
-    height: 225px;
+    width: 120px;
+    height: 150px;
     overflow: hidden;
     float: left;
-    margin: 0 10px;
+    margin: 20px 10px;
     background: #0E0E0E;
     border-radius: 3px;
-    padding: 5px;
+    padding: 0px;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
@@ -119,8 +120,8 @@ BOXES START
     border-color: rgb(57, 57, 57);
 }
 .box-content, .box-content a{
-	font-size:0.78em;
-	font-family:'Ubuntu', Trebuchet;
+	font-size:0.90em;
+	font-family:helvetica;
 	letter-spacing:0.02em;
 }
 
@@ -183,7 +184,7 @@ OTHER BOXES
 	-webkit-transition: 0.3s;
 	-o-transition: 0.3s;
 	transition: 0.3s;
-	height:500px;
+	height:250px;
 	/* if you want to expand boxes only to the bottom, delete the line below (just margin-top) */
 	margin-top:-60px;
 	border-width: 5px 0;
