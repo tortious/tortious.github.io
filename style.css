@@ -18,10 +18,9 @@
 
 
 body{
-	color: #ccc;
-	background: url("11bg.png") no-repeat #161616 fixed;
+	background: url("11bg.png") no-repeat #161616 fixed !important;
 	background-position: center;
-	background-repeat: no-repeat;
+	/* background-repeat: no-repeat;*/
 	background-size: cover;
 }
 
