@@ -80,6 +80,7 @@ ul.link-box{
 
 li.link-item{
 	list-style:none;
+	font-size: 10px !important;
 	display:inline-block;
 	padding: 1px 5px;
 	min-width:50px;
