@@ -72,7 +72,7 @@ html {
 
 body {
     height:100%;
-    background: list-style-image: url("background1.png") !important;
+    background: url(../background1.png);
     background-repeat:no-repeat !important;
     color: #bbb;
     margin: 0 0 0;
