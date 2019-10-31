@@ -1,102 +1,163 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="utf-8" />
-    <title>Startpage</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    <noscript>
-        <style>
-            #clock {
-                display: none;
-            }
-        </style>
-    </noscript>
+	<link href='http://fonts.googleapis.com/css?family=Lobster|Roboto|Roboto:300|Roboto+Condensed' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<title>Start</title>
+
+	<script>
+	window.addEventListener('preload', function load() {
+	window.removeEventListener('preload', load, false);
+	document.body.classList.remove('preload');
+	}, false);
+	</script>
 </head>
 
-<body>
-    <main>
-        <div id="top-div">
-            <div id="clock-div">
-                <h1 id="clock">
-                    00/00/0000
-                    00:00:00
-                </h1>
-            </div>
+<body class="preload">
+<h1>Welcome to the Web.</h1>
+<div id="boxes">
 
-            <form id="search-form" action="https://duckduckgo.com">
-                <div id="search-bar-wrapper">
-                    <input id="search-bar" name="q" type="text" title="Search" />
-                    <button id="search-bar-btn" type="submit">&#128270;</button>
-                </div>
-            </form>
-        </div>
-        <div id="links-container">
-            <section class="link-section">
-                <h2 class="link-section-title red">Category 1</h2>
-                <hr />
-                <ul class="link-list">
-                    <li class="link-list-item"><a class="link" href="#">Website 1</a></li>
-                    <li class="link-list-item"><a class="link" href="#">Website 2</a></li>
-                    <li class="link-list-item"><a class="link" href="#">Website 3</a></li>
-                    <li class="link-list-item"><a class="link" href="#">Website 4</a></li>
-                    <li class="link-list-item"><a class="link" href="#">Website 5</a></li>
-                </ul>
-            </section>
-            <section class="link-section">
-                <h2 class="link-section-title blue">Category 2</h2>
-                <hr />
-                <ul class="link-list">
-                    <li class="link-list-item"><a class="link" href="#">Website 1</a></li>
-                    <li class="link-list-item"><a class="link" href="#">Website 2</a></li>
-                    <li class="link-list-item"><a class="link" href="#">Website 3</a></li>
-                    <li class="link-list-item"><a class="link" href="#">Website 4</a></li>
-                    <li class="link-list-item"><a class="link" href="#">Website 5</a></li>
-                </ul>
-            </section>
-            <section class="link-section">
-                <h2 class="link-section-title green">Category 3</h2>
-                <hr />
-                <ul class="link-list">
-                    <li class="link-list-item"><a class="link" href="#">Website 1</a></li>
-                    <li class="link-list-item"><a class="link" href="#">Website 2</a></li>
-                    <li class="link-list-item"><a class="link" href="#">Website 3</a></li>
-                    <li class="link-list-item"><a class="link" href="#">Website 4</a></li>
-                    <li class="link-list-item"><a class="link" href="#">Website 5</a></li>
-                </ul>
-            </section>
-            <section class="link-section">
-                <h2 class="link-section-title purple">Category 4</h2>
-                <hr />
-                <ul class="link-list">
-                    <li class="link-list-item"><a class="link" href="#">Website 1</a></li>
-                    <li class="link-list-item"><a class="link" href="#">Website 2</a></li>
-                    <li class="link-list-item"><a class="link" href="#">Website 3</a></li>
-                    <li class="link-list-item"><a class="link" href="#">Website 4</a></li>
-                    <li class="link-list-item"><a class="link" href="#">Website 5</a></li>
-                </ul>
-            </section>
-        </div>
-    </main>
-
-    <script src="js/main.js"></script>
-</body>
-
-</html>
-<li><a href="https://colorhexa.com/" target="_blank">Colorhexa</a></li>
-<li><a href="https://mycolor.space/" target="_blank">My Color</a></li>
-<li><a href="https://coolors.co/" target="_blank">Coolors</a></li>
-<li><a href="http://colormind.io/" target ="_blank">Color Mind</a></li>
-<li><a href="https://wildtype.design/" target="_blank">Wildtype</a></li>
-<li><a href="http://dafont.com/" target="_blank">Dafont</a></li>
-<li><a href="https://onextrapixel.com/" target="_blank">One Extra Pixel</a></li>
-<li><a href="https://www.hongkiat.com/blog/" target="_blank">Hongkiat</a></li>
-<li><a href="https://line25.com/" target="_blank">Line 25</a></li>
-<li><a href="http://explosm.net/" target="_blank">Explosm</a></li>
-<li><a href="http://youtube.com/" target="_blank">Youtube</a></li>
-</ul>
-</div>
+	<div class="box"><h4>Group #1</h4>
+		<ul>
+			<li><a href="https://github.com/alecdtatum/start"> Link #1 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #2 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #3 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #4 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #5 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #6 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #7 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #8 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #9 </a></li>
+		</ul>
 	</div>
+
+	<div class="box"><h4>Group #2</h4>
+		<ul>
+			<li><a href="https://github.com/alecdtatum/start"> Link #1 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #2 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #3 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #4 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #5 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #6 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #7 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #8 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #9 </a></li>
+		</ul>
+	</div>
+
+
+
+	<div class="sbox"><h4>Search</h4>
+		<table id="search">
+
+			<tr>
+				<td><a href="https://startpage.com">Startpage</a></td>
+				<td>
+					<form action="https://startpage.com/do/search" method="post">
+					<input type="text" name="q" autofocus/></form>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><a href="https://www.ixquick.com">Ixquick</a></td>
+				<td>
+					<form action="https://ixquick.com/do/search" method="post">
+					<input type="text" name="q" /></form>
+				</td>
+			</tr>
+
+			<tr>
+				<td><a href="https://startpage.com">Search #3</a></td>
+				<td>
+					<form action="https://startpage.com/do/search" method="post">
+					<input type="text" name="q" autofocus/></form>
+				</td>
+			</tr>
+
+			<tr>
+				<td><a href="https://startpage.com">Search #4</a></td>
+				<td>
+					<form action="https://startpage.com/do/search" method="post">
+					<input type="text" name="q" autofocus/></form>
+				</td>
+			</tr>
+
+			<tr>
+				<td><a href="https://startpage.com">Search #5</a></td>
+				<td>
+					<form action="https://startpage.com/do/search" method="post">
+					<input type="text" name="q" autofocus/></form>
+				</td>
+			</tr>
+
+			<tr>
+				<td><a href="https://startpage.com">Search #6</a></td>
+				<td>
+					<form action="https://startpage.com/do/search" method="post">
+					<input type="text" name="q" autofocus/></form>
+				</td>
+			</tr>
+
+			<tr>
+				<td><a href="https://startpage.com">Search #7</a></td>
+				<td>
+					<form action="https://startpage.com/do/search" method="post">
+					<input type="text" name="q" autofocus/></form>
+				</td>
+			</tr>
+
+			<tr>
+				<td><a href="https://startpage.com">Search #8</a></td>
+				<td>
+					<form action="https://startpage.com/do/search" method="post">
+					<input type="text" name="q" autofocus/></form>
+				</td>
+			</tr>
+
+			<tr>
+				<td><a href="https://startpage.com">Search #9</a></td>
+				<td>
+					<form action="https://startpage.com/do/search" method="post">
+					<input type="text" name="q" autofocus/></form>
+				</td>
+			</tr>
+
+		</table>
+	</div>
+
+
+	<div class="box"><h4>Group #3</h4>
+		<ul>
+			<li><a href="https://github.com/alecdtatum/start"> Link #1 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #2 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #3 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #4 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #5 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #6 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #7 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #8 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #9 </a></li>
+		</ul>
+	</div>
+
+
+	<div class="box"><h4>Group #4</h4>
+		<ul>
+			<li><a href="https://github.com/alecdtatum/start"> Link #1 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #2 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #3 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #4 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #5 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #6 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #7 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #8 </a></li>
+			<li><a href="https://github.com/alecdtatum/start"> Link #9 </a></li>
+		</ul>
+	</div>
+
+</div>
+
 </body>
+
 </html>
