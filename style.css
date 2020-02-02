@@ -1,9 +1,9 @@
 /* Body */
 body {
 	background: url("background1.png");
-	font: 1.2em 'Roboto', sans-serif;
+	font: 1.2em 'Fontin', BlackChancery;
 	font-weight: 300;
-	color: #FFF;
+	color: #00ff7f;
 	}
 .preload {
 	transition: none;
