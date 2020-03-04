@@ -94,9 +94,9 @@ td a {
 	line-height: 25px;
 	}
 td:hover a {
-	background: #EEE;
+	background: #0A0A0A;
 	box-shadow: 0 0 4px #FFF;
-	color: #000;
+	color: #0a84ff;
 	transition: 0.15s linear;
 	}
 td {
