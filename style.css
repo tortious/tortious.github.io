@@ -4,13 +4,14 @@ body {
 	background-size: cover;
 	font: 1.2em 'Fontin', BlackChancery;
 	font-weight: 400;
-	color: #d4a2ea;
+	color: #FD91FA;
 	}
 .preload {
 	transition: none;
 	}
 h1 {
 	font: 4.0em 'Lobster', cursive;
+	color: #6FE9A8;
 	text-align: center;
 	}
 
