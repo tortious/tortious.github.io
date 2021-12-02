@@ -60,7 +60,7 @@ a:hover {
 	}
 .box {
 	float: left;
-	width: 15%;
+	width: 20%;
 	margin: 0 3px;
 	opacity: 0.8;
 	transition: 0.15s linear;
