@@ -4,7 +4,7 @@ body {
 	background-size: cover;
 	font: 1.2em 'Fontin', BlackChancery;
 	font-weight: 400;
-	color: #F0C58E;
+	color: #CCA5F0;
 	}
 .preload {
 	transition: none;
@@ -25,17 +25,18 @@ ul {
 	}
 li {
 	padding-left: 16px;
-	padding-bottom: 2px;
+	padding-bottom: 2px #F0C58E solid;
 	border-radius: 20px;
 	height: 24px;
 	}
 li:hover {
 	background: #222;
-	box-shadow: 0 0 6px #FFF;
+	color: #FBB269;
+	box-shadow: 0 0 4px #FFF;
 	transition: 0.15s linear;
 	}
 li a {
-	margin-left: -12px;
+	margin-left: -6px;
 	padding: 0 8px;
 	}
 a {
