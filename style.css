@@ -2,7 +2,7 @@
 body {
 	background: url("background1.png");
 	background-size: cover;
-	font: 1.2em 'Arvo', Champagne & Limousines;
+	font: 1.2em 'Champagne & Limousines', Arvo;
 	font-weight: 400;
 	color: #CCA5F0;
 	}
@@ -70,7 +70,7 @@ a:hover {
 	}
 .box h4, .sbox h4 {
 	margin: 0 0 0 0;
-	font: 1.5em 'Righteous', sans-serif;
+	font: 1.5em 'Righteous', Anticed;
 	text-align: center;
 	border-bottom: 1.2px #6FE9A8 solid;
 	}
