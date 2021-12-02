@@ -2,7 +2,7 @@
 body {
 	background: url("background1.png");
 	background-size: cover;
-	font: 1.2em 'Champagne & Limousines', Arvo;
+	font: 1.2em 'Montserrat', Arvo;
 	font-weight: 400;
 	color: #CCA5F0;
 	}
@@ -30,9 +30,9 @@ li {
 	height: 24px;
 	}
 li:hover {
-	background: #222;
+/* 	background: #222; */
 	color: #FBB269;
-	box-shadow: 0 0 4px #FFF;
+/* 	box-shadow: 0 0 4px #FFF; */
 	transition: 0.15s linear;
 	}
 li a {
@@ -70,7 +70,7 @@ a:hover {
 	}
 .box h4, .sbox h4 {
 	margin: 0 0 0 0;
-	font: 1.5em 'Righteous', Anticed;
+	font: 1.5em 'Marlboro', Anticed;
 	text-align: center;
 	border-bottom: 1.2px #6FE9A8 solid;
 	}
@@ -99,8 +99,8 @@ td a {
 	line-height: 25px;
 	}
 td:hover a {
-	background: #0A0A0A;
-	box-shadow: 0 0 4px #FFF;
+/* 	background: #0A0A0A; */
+/* 	box-shadow: 0 0 4px #FFF; */
 	color: #0a84ff;
 	transition: 0.15s linear;
 	}
@@ -108,7 +108,7 @@ td {
 	padding: 0 0 0 0;
 	min-height: 25px;
 	max-height: 25px;
-	margin-top: -2px;
+	margin-top: 0px;
 	}
 td:nth-child(1) {
 	float: left;
