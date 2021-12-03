@@ -1,4 +1,4 @@
-/* Body */
+
 body {
 	background: url("background1.png");
 	background-size: cover;
@@ -43,7 +43,7 @@ li a {
 a {
 	display: block;
 	width: 100%;
-	color: #50C0FD;
+	color: #38AFFF;
 	text-decoration: none;
 	cursor: default;
 	}
@@ -94,7 +94,7 @@ form {
 	height: 25px;
 	}
 td a {
-	color: #FE4577;
+	color: ##BABABA;
 	font-size: 1.2em;
 	font-weight: 300;
 	border-radius: 20px;
@@ -103,12 +103,12 @@ td a {
 td:hover a {
 /* 	background: #0A0A0A; */
 /* 	box-shadow: 0 0 4px #FFF; */
-	color: #818080;
+	color: #9B7BF2;
 	transition: 0.15s linear;
 	}
 td {
 /* 	background: #2a2a2a; */
-	color: #0a84ff;
+	color: #38AFFF;
 	padding: 0 0 0 0;
 	min-height: 25px;
 	max-height: 25px;
