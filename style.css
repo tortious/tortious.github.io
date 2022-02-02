@@ -1,7 +1,7 @@
 
 body {
 	background: url("scream-ye.jpg");
-	background-size: no-repeat cover;
+	background-size: cover !important;
 	font: 1.2em 'Montserrat', Raleway;
 	font-weight: 400;
 	color: #EFA3EE;
