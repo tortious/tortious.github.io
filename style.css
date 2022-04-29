@@ -34,7 +34,7 @@ li {
 	}
 li:hover {
 /* 	background: #222; */
-	color: #FBB269;
+	color: #73FDCA;
 /* 	box-shadow: 0 0 4px #FFF; */
 	transition: 0.15s linear;
 	}
@@ -45,7 +45,7 @@ li a {
 a {
 	display: block;
 	width: 100%;
-	color: #38AFFF;
+	color: #7CDCFF;
 	text-decoration: none;
 	cursor: default;
 	}
