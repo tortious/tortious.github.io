@@ -10,6 +10,17 @@ body {
 .preload {
 	transition: none;
 	}
+
+
+#clock {
+  font-family: sans-serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  font-family: var(--fontFamily);
+  color: var(--fg);
+  margin-bottom: 0.25em;
+}
+
 h1 {
 	font: 4.0em 'Righteous', cursive; 
 	color: #F0C58E;
@@ -142,11 +153,3 @@ input:hover, input:focus {
 	box-shadow: 0 0 4px #0A0A0A;
 	}
 
-.time {
-    font-family: "Cartograph CF"; monospace;
-    font-weight: mono;
-    font-size: 5.5rem;
-    margin: 50px 0px 50px 0px;
-    color: var(--linkcolor);
-	text-shadow: -5px 5px 0px #eb6f92, -10px 10px #f6c177, -15px 15px 0px #C3A5E6, -20px 20px 0px #31748f;
-}
