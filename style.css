@@ -5,7 +5,8 @@ body {
 	background-size: cover;
 	font: 1.2em 'Montserrat', Raleway;
 	font-weight: 400;
-	color: #EFA3EE;
+/* 	color: #EFA3EE; */
+	color: #CE5FFE;
 	}
 .preload {
 	transition: none;
@@ -46,7 +47,7 @@ li {
 	}
 li:hover {
 /* 	background: #222; */
-	color: #99FDFB;
+	color: #5BD6FE;
 /* 	box-shadow: 0 0 4px #FFF; */
 	transition: 0.15s linear;
 	}
