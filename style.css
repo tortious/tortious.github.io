@@ -5,8 +5,8 @@ body {
 	background-size: cover;
 	font: 1.2em 'Montserrat', Raleway;
 	font-weight: 400;
-/* 	color: #EFA3EE; */
-	color: #CE5FFE;
+	color: #EFA3EE;
+/* 	color: #CE5FFE; */
 	overload: hidden;
 	}
 .preload {
@@ -26,15 +26,15 @@ body {
 
 h1 {
 	font: 4.0em 'Righteous', cursive; 
-/* 	color: #F0C58E; */
-	color: #C48AFC;
+	color: #F0C58E;
+/* 	color: #C48AFC; */
 	text-align: center;
 	}
 
 
 /* Links */
 ul {
-	color: #FEAEED;
+	color: #FEF89F;
 	list-style-type: none;
 	margin-top: 8px;
 	padding-left: 0;
