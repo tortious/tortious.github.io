@@ -7,6 +7,7 @@ body {
 	font-weight: 400;
 /* 	color: #EFA3EE; */
 	color: #CE5FFE;
+	overload: hidden;
 	}
 .preload {
 	transition: none;
