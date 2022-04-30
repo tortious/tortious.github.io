@@ -60,7 +60,8 @@ li a {
 a {
 	display: block;
 	width: 100%;
-	color: #84E6FB;
+/* 	color: #84E6FB; */
+	color: #58a6ff;
 	text-decoration: none;
 	cursor: default;
 	}
