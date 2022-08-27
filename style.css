@@ -4,6 +4,7 @@ body {
 	background: url("rubik_cube_neon_glow_256682_2560x1440.jpg");
 	background-size: cover;
 	background-position: center;
+	background-origin: content-box;
 	background-repeat: no-repeat;
 	font: 1.2em 'Montserrat', Raleway;
 	font-weight: 400;
