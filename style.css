@@ -30,7 +30,8 @@ body {
 
 h1 {
 	font: 4.0em 'Righteous', cursive; 
-	color: #F0C58E;
+/* 	color: #F0C58E; */
+	color: f0dc8e;
 /* 	color: #C48AFC; */
 	text-align: center;
 	}
