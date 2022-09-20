@@ -5,7 +5,7 @@ body {
 	background-size: cover;
 	background-position: center;
 /* 	background-origin: content-box; */
-	background-repeat: no-repeat;
+/* 	background-repeat: no-repeat; */
 	background-color: #000;
 	font: 1.2em 'Montserrat', Raleway;
 	font-weight: 400;
