@@ -4,10 +4,10 @@ body {
 	background: url("rubik_cube_neon_glow_256682_2560x1440.jpg");
 	background-size: cover;
 	background-position: absolute;
-	margin-bottom: -100px;
+/* 	margin-bottom: -100px; */
 /* 	padding-top: 100px; */
 /* 	background-origin: content-box; */
-/* 	background-repeat: no-repeat; */
+	background-repeat: no-repeat;
 	background-color: #000;
 	font: 1.2em 'Montserrat', Raleway;
 	font-weight: 400;
