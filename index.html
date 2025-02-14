@@ -4,159 +4,152 @@
   <meta charset="UTF-8" />
   <title>Tortiou5's Page</title>
   <style>
-    /* ----- Basic Reset & Body Styles ----- */
+    /* Basic Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+    
+    /* Full-screen layout */
     body {
       font-family: Arial, sans-serif;
       background: url('bonsai_tree_plant_143204_1920x1080.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
       padding: 20px;
+      text-align: center;
     }
 
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
+    /* IP Address - Center Top */
+    #ip-address {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
 
-    /* ----- RSS Feed Styling ----- */
-    #rss-feed {
-      margin-top: 20px;
-      background: rgba(0, 0, 0, 0.7);
-      padding: 20px;
-      border-radius: 8px;
+    /* Welcome Message */
+    #greeting {
+      font-size: 2.5rem;
+      font-weight: bold;
+      font-family: "Georgia", serif;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      margin-bottom: 20px;
     }
+
+    /* Quick Links - Left & Right */
+    .quick-links {
+      position: absolute;
+      top: 20%;
+      width: 200px;
+      font-size: 1.2rem;
+    }
+    
+    .left-links {
+      left: 20px;
+      text-align: left;
+    }
+    
+    .right-links {
+      right: 20px;
+      text-align: right;
+    }
+    
+    .quick-links ul {
+      list-style-type: none;
+    }
+
+    .quick-links a {
+      color: #ff0;
+      text-decoration: none;
+    }
+
+    .quick-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* RSS Feed */
     #rss-feed h2 {
       font-size: 1.8rem;
       margin-bottom: 10px;
-      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     }
+
     .rss-item {
-      padding: 10px;
-      border-bottom: 1px solid #777;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      transition: background 0.3s;
     }
-    .rss-item:last-child {
-      border-bottom: none;
+
+    .rss-item:hover {
+      background: rgba(255, 255, 255, 0.1);
     }
+
     .rss-item a {
       color: #ff0;
       font-size: 1.2rem;
       text-decoration: none;
     }
+
     .rss-item a:hover {
       text-decoration: underline;
     }
+
     .rss-item small {
       display: block;
       color: #ccc;
       margin-top: 5px;
     }
 
-    /* ----- Quick Links & Other Sections ----- */
-    .info-section, .quick-links, .search-container, #ip-address {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 15px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-    .quick-links {
-      display: flex;
-      justify-content: space-between;
-    }
-    .quick-links ul {
-      list-style-type: none;
-    }
-    .quick-links li {
-      margin-bottom: 5px;
-    }
-    .quick-links a {
-      color: #fff;
-      text-decoration: none;
-    }
-    .quick-links a:hover {
-      text-decoration: underline;
-    }
-
-    /* ----- Search Bar ----- */
-    .search-container {
-      display: flex;
-      gap: 10px;
-    }
-    .search-container input, .search-container select, .search-container button {
-      padding: 10px;
-      border-radius: 4px;
-      border: none;
-    }
-    .search-container button {
-      background: #333;
-      color: #fff;
-      cursor: pointer;
-    }
-    .search-container button:hover {
-      background: #555;
-    }
-
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Greeting Section -->
-    <div id="greeting">Good morning, Tortiou5! Ready to make moves!?</div>
+  
+  <!-- IP Address at the Top -->
+  <div id="ip-address">Your IP: <span id="ip">Loading...</span></div>
 
-    <!-- Time & Weather Section -->
-    <div class="info-section">
-      <div>Time (Central US): <span id="time"></span></div>
-      <div>Weather in Schaumburg, IL: <span id="weather"></span></div>
-    </div>
+  <!-- Centered Welcome Message -->
+  <div id="greeting">Good morning, Tortiou5! Ready to make moves!?</div>
 
-    <!-- Quick Links -->
-    <div class="quick-links">
-      <div>
-        <ul>
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
-        </ul>
-      </div>
-      <div>
-        <ul>
-          <li><a href="#">Link 4</a></li>
-          <li><a href="#">Link 5</a></li>
-          <li><a href="#">Link 6</a></li>
-        </ul>
-      </div>
-    </div>
+  <!-- Left Quick Links -->
+  <div class="quick-links left-links">
+    <ul>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <li><a href="#">Link 3</a></li>
+      <li><a href="#">Link 4</a></li>
+      <li><a href="#">Link 5</a></li>
+      <li><a href="#">Link 6</a></li>
+    </ul>
+  </div>
 
-    <!-- Search Bar -->
-    <div class="search-container">
-      <select id="searchEngine">
-        <option value="google">Google</option>
-        <option value="bing">Bing</option>
-      </select>
-      <input type="text" id="searchQuery" placeholder="Search..." />
-      <button id="searchBtn">Search</button>
-    </div>
+  <!-- Right Quick Links -->
+  <div class="quick-links right-links">
+    <ul>
+      <li><a href="#">Link 7</a></li>
+      <li><a href="#">Link 8</a></li>
+      <li><a href="#">Link 9</a></li>
+      <li><a href="#">Link 10</a></li>
+      <li><a href="#">Link 11</a></li>
+      <li><a href="#">Link 12</a></li>
+    </ul>
+  </div>
 
-    <!-- IP Address -->
-    <div id="ip-address">Your IP: <span id="ip"></span></div>
-
-    <!-- RSS Feed Section -->
-    <div id="rss-feed">
-      <h2>Latest SharePoint & Microsoft 365 News</h2>
-      <div id="feed-content">Loading feed...</div>
-    </div>
+  <!-- RSS Feed Section -->
+  <div id="rss-feed">
+    <h2>Latest SharePoint & Microsoft 365 News</h2>
+    <div id="feed-content">Loading feed...</div>
   </div>
 
   <script>
-    /******************************************************
-     * Update Greeting Based on Time of Day
-     ******************************************************/
+    // Fetch & Display IP Address
+    fetch("https://api.ipify.org?format=json")
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("ip").textContent = data.ip;
+      });
+
+    // Update Greeting
     function updateGreeting() {
       const hour = new Date().getHours();
       let greetingText = "Good evening";
@@ -170,24 +163,9 @@
       document.getElementById("greeting").textContent = `${greetingText}, Tortiou5! Ready to make moves!?`;
     }
 
-    /******************************************************
-     * Update Time in 12-hour format (Central US)
-     ******************************************************/
-    function updateTime() {
-      document.getElementById("time").textContent = new Date().toLocaleTimeString("en-US", {
-        timeZone: "America/Chicago",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: true
-      });
-    }
-    setInterval(updateTime, 1000);
     updateGreeting();
 
-    /******************************************************
-     * Fetch RSS Feed & Update Automatically
-     ******************************************************/
+    // Fetch RSS Feed & Update Automatically
     const feedUrl = "https://tortious.github.io/rss.xml";
 
     function loadRSSFeed() {
@@ -217,30 +195,10 @@
         });
     }
 
-    // Initial load
+    // Initial Load & Auto Refresh Every 5 Minutes
     loadRSSFeed();
-    // Refresh feed every 5 minutes
     setInterval(loadRSSFeed, 300000);
 
-    /******************************************************
-     * Fetch & Display IP Address
-     ******************************************************/
-    fetch("https://api.ipify.org?format=json")
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById("ip").textContent = data.ip;
-      });
-
-    /******************************************************
-     * Search Functionality
-     ******************************************************/
-    document.getElementById("searchBtn").addEventListener("click", function() {
-      const engine = document.getElementById("searchEngine").value;
-      const query = document.getElementById("searchQuery").value.trim();
-      if (!query) return;
-      let url = engine === "bing" ? `https://www.bing.com/search?q=${query}` : `https://www.google.com/search?q=${query}`;
-      window.open(url, "_blank");
-    });
   </script>
 </body>
 </html>
