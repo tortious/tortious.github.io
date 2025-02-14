@@ -19,31 +19,34 @@
     }
 
     .container {
-      max-width: 1000px;
+      width: 100%;
+      max-width: 1200px;
       margin: 0 auto;
-      background-color: rgba(0,0,0,0.5);
+      padding: 20px;
+    }
+
+    /* ----- RSS Feed Styling ----- */
+    #rss-feed {
+      margin-top: 20px;
+      background: rgba(0, 0, 0, 0.7);
       padding: 20px;
       border-radius: 8px;
     }
-
-    /* RSS Feed Styles */
-    #rss-feed {
-      margin-top: 20px;
-    }
     #rss-feed h2 {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       margin-bottom: 10px;
+      text-align: center;
     }
     .rss-item {
       padding: 10px;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #777;
     }
     .rss-item:last-child {
       border-bottom: none;
     }
     .rss-item a {
       color: #ff0;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       text-decoration: none;
     }
     .rss-item a:hover {
@@ -54,12 +57,96 @@
       color: #ccc;
       margin-top: 5px;
     }
+
+    /* ----- Quick Links & Other Sections ----- */
+    .info-section, .quick-links, .search-container, #ip-address {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .quick-links {
+      display: flex;
+      justify-content: space-between;
+    }
+    .quick-links ul {
+      list-style-type: none;
+    }
+    .quick-links li {
+      margin-bottom: 5px;
+    }
+    .quick-links a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .quick-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* ----- Search Bar ----- */
+    .search-container {
+      display: flex;
+      gap: 10px;
+    }
+    .search-container input, .search-container select, .search-container button {
+      padding: 10px;
+      border-radius: 4px;
+      border: none;
+    }
+    .search-container button {
+      background: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+    .search-container button:hover {
+      background: #555;
+    }
+
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Greeting Section -->
     <div id="greeting">Good morning, Tortiou5! Ready to make moves!?</div>
 
+    <!-- Time & Weather Section -->
+    <div class="info-section">
+      <div>Time (Central US): <span id="time"></span></div>
+      <div>Weather in Schaumburg, IL: <span id="weather"></span></div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="quick-links">
+      <div>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><a href="#">Link 4</a></li>
+          <li><a href="#">Link 5</a></li>
+          <li><a href="#">Link 6</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <select id="searchEngine">
+        <option value="google">Google</option>
+        <option value="bing">Bing</option>
+      </select>
+      <input type="text" id="searchQuery" placeholder="Search..." />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <!-- IP Address -->
+    <div id="ip-address">Your IP: <span id="ip"></span></div>
+
+    <!-- RSS Feed Section -->
     <div id="rss-feed">
       <h2>Latest SharePoint & Microsoft 365 News</h2>
       <div id="feed-content">Loading feed...</div>
@@ -67,7 +154,40 @@
   </div>
 
   <script>
-    // Replace this with your actual RSS feed URL on GitHub Pages
+    /******************************************************
+     * Update Greeting Based on Time of Day
+     ******************************************************/
+    function updateGreeting() {
+      const hour = new Date().getHours();
+      let greetingText = "Good evening";
+
+      if (hour < 12) {
+        greetingText = "Good morning";
+      } else if (hour < 18) {
+        greetingText = "Good afternoon";
+      }
+
+      document.getElementById("greeting").textContent = `${greetingText}, Tortiou5! Ready to make moves!?`;
+    }
+
+    /******************************************************
+     * Update Time in 12-hour format (Central US)
+     ******************************************************/
+    function updateTime() {
+      document.getElementById("time").textContent = new Date().toLocaleTimeString("en-US", {
+        timeZone: "America/Chicago",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true
+      });
+    }
+    setInterval(updateTime, 1000);
+    updateGreeting();
+
+    /******************************************************
+     * Fetch RSS Feed & Update Automatically
+     ******************************************************/
     const feedUrl = "https://tortious.github.io/rss.xml";
 
     function loadRSSFeed() {
@@ -78,8 +198,7 @@
           let items = data.querySelectorAll("item");
           let output = "";
 
-          items.forEach((el, index) => {
-            if (index >= 5) return; // Limit to 5 items for cleaner UI
+          items.forEach((el) => {
             let title = el.querySelector("title").textContent;
             let link = el.querySelector("link").textContent;
             let pubDate = new Date(el.querySelector("pubDate").textContent).toLocaleDateString("en-US");
@@ -98,7 +217,30 @@
         });
     }
 
-    document.addEventListener("DOMContentLoaded", loadRSSFeed);
+    // Initial load
+    loadRSSFeed();
+    // Refresh feed every 5 minutes
+    setInterval(loadRSSFeed, 300000);
+
+    /******************************************************
+     * Fetch & Display IP Address
+     ******************************************************/
+    fetch("https://api.ipify.org?format=json")
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("ip").textContent = data.ip;
+      });
+
+    /******************************************************
+     * Search Functionality
+     ******************************************************/
+    document.getElementById("searchBtn").addEventListener("click", function() {
+      const engine = document.getElementById("searchEngine").value;
+      const query = document.getElementById("searchQuery").value.trim();
+      if (!query) return;
+      let url = engine === "bing" ? `https://www.bing.com/search?q=${query}` : `https://www.google.com/search?q=${query}`;
+      window.open(url, "_blank");
+    });
   </script>
 </body>
 </html>
