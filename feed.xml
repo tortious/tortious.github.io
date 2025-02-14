@@ -5,7 +5,7 @@
     <!-- CHANNEL-LEVEL INFO (Your Site) -->
     <title>Tortiou5’s Site</title>
     <link>https://tortious.github.io</link>
-    <description>Aggregated RSS references for SharePoint &amp; Microsoft 365 resources.</description>
+    <description>Aggregated RSS references foramp; Microsoft 365 resources.</description>
 
     <!-- 1. SharePoint Maven -->
     <item>
@@ -28,7 +28,7 @@
     <!-- 3. Elio Struyf -->
     <item>
       <title>Elio Struyf</title>
-      <description>Articles, tips & resources by Elio Struyf.</description>
+      <description>Articles, tips &amp; resources by Elio Struyf.</description>
       <link>https://www.eliostruyf.com/feed</link>
       <pubDate>Thu, 13 Feb 2025 11:00:00 +0000</pubDate>
       <guid>https://www.eliostruyf.com/feed</guid>
@@ -37,7 +37,7 @@
     <!-- 4. Andrew Connell -->
     <item>
       <title>Andrew Connell</title>
-      <description>SharePoint & Office 365 developer content by Andrew Connell.</description>
+      <description>SharePoint &amp; Office 365 developer content by Andrew Connell.</description>
       <link>https://www.andrewconnell.com/feed</link>
       <pubDate>Thu, 13 Feb 2025 12:00:00 +0000</pubDate>
       <guid>https://www.andrewconnell.com/feed</guid>
@@ -47,7 +47,6 @@
     <item>
       <title>SharePoint Framework Docs</title>
       <description>Microsoft’s official SPFx documentation.</description>
-      <!-- Not all docs pages have an RSS feed. If there's no feed, link directly to the docs. -->
       <link>https://learn.microsoft.com/en-us/sharepoint/dev/spfx/</link>
       <pubDate>Thu, 13 Feb 2025 13:00:00 +0000</pubDate>
       <guid>https://learn.microsoft.com/en-us/sharepoint/dev/spfx/</guid>
@@ -65,7 +64,7 @@
     <!-- 7. SharePoint Diary -->
     <item>
       <title>SharePoint Diary</title>
-      <description>SharePoint tips & resources.</description>
+      <description>SharePoint tips &amp; resources.</description>
       <link>https://sharepointdiary.com/feed</link>
       <pubDate>Thu, 13 Feb 2025 15:00:00 +0000</pubDate>
       <guid>https://sharepointdiary.com/feed</guid>
@@ -74,7 +73,7 @@
     <!-- 8. The Chris Kent -->
     <item>
       <title>The Chris Kent</title>
-      <description>SharePoint, Office 365 & more by Chris Kent.</description>
+      <description>SharePoint, Office 365 &amp; more by Chris Kent.</description>
       <link>https://thechriskent.com/feed</link>
       <pubDate>Thu, 13 Feb 2025 16:00:00 +0000</pubDate>
       <guid>https://thechriskent.com/feed</guid>
@@ -83,7 +82,7 @@
     <!-- 9. SharePains -->
     <item>
       <title>SharePains</title>
-      <description>Power Platform & SharePoint solutions by Pieter Veenstra.</description>
+      <description>Power Platform &amp; SharePoint solutions by Pieter Veenstra.</description>
       <link>https://sharepains.com/feed</link>
       <pubDate>Thu, 13 Feb 2025 17:00:00 +0000</pubDate>
       <guid>https://sharepains.com/feed</guid>
@@ -101,7 +100,7 @@
     <!-- 11. Collab365 -->
     <item>
       <title>Collab365</title>
-      <description>Microsoft 365 community events & blog.</description>
+      <description>Microsoft 365 community events &amp; blog.</description>
       <link>https://collab365.com/feed</link>
       <pubDate>Thu, 13 Feb 2025 19:00:00 +0000</pubDate>
       <guid>https://collab365.com/feed</guid>
@@ -110,7 +109,7 @@
     <!-- 12. WonderLaura -->
     <item>
       <title>WonderLaura</title>
-      <description>Laura Rogers on SharePoint, Power Apps & Power Automate.</description>
+      <description>Laura Rogers on SharePoint, Power Apps &amp; Power Automate.</description>
       <link>https://wonderlaura.com/feed</link>
       <pubDate>Thu, 13 Feb 2025 20:00:00 +0000</pubDate>
       <guid>https://wonderlaura.com/feed</guid>
@@ -120,7 +119,6 @@
     <item>
       <title>Power Automate (Flow) Blog</title>
       <description>Blog posts for Microsoft Power Automate (Flow).</description>
-      <!-- If no feed is found, link directly to the blog's main URL. -->
       <link>https://flow.microsoft.com/en-us/blog/feed</link>
       <pubDate>Thu, 13 Feb 2025 21:00:00 +0000</pubDate>
       <guid>https://flow.microsoft.com/en-us/blog/feed</guid>
