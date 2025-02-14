@@ -1,141 +1,288 @@
-
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<link href='http://fonts.googleapis.com/css?family=Lobster|Roboto|Roboto:300|Roboto+Condensed' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Tortiou5's Page</title>
+  <style>
+    /* ----- Basic Reset & Body Styles ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: url('path_to_background_image.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      padding: 20px;
+    }
 
-	<title>Start</title>
-	<script>
-	window.addEventListener('preload', function load() {
-	window.removeEventListener('preload', load, false);
-	document.body.classList.remove('preload');
-	}, false);
-	</script>
-</head> 
+    /* ----- Container for content ----- */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 8px;
+    }
 
-<body class="preload">
-<h1>~Get Yo Rocks Off~</h1>
-<div id="boxes">
-	
+    /* ----- Greeting Section ----- */
+    #greeting {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
 
-	<div class="box"><h4>T&A For Days</h4>
-		<ul>
-			<li><a href="https://biqle.ru"> Biqle </a></li>
-			<li><a href="https://eporner.com"> ePron </a></li>
-			<li><a href="http://pornissimo.org"> Pornissimo </a></li>
-            		<li><a href="http://porno365.space/"> Yearround-V3 </a></li>
-			<li><a href="https://spankbang.com"> Spanky </a></li>
-			<li><a href="https://hotpornfile.org"> HotPornFIle </a></li>
-			<li><a href="https://hqporner.com"> HPronner </a></li>
-			<li><a href="https://xfantazy.com"> xFantazy </a></li>
-			<li><a href="https://sxyprn.com"> sxyprn </a></li>
-			<li><a href="https://0xxx.ws"> 0xxx </a></li>  
-			<li><a href="https://www.ixxx.com/"> iXXX </a></li>
-			<li><a href="https://pornmz.com/"> PornMZ </a></li>
-			<li><a href="https://noodlemagazine/"> DaftS3x  </a></li>
-			<li><a href="https://goodporn.to/"> G00dpron </a></li>
-			<!-- <li><a href="https://mangovideo.pw/"> MangoVideo </a></li> -->
-			<li><a href="https://pornobae.com/"> P0rn0Ba3 </a></li>
-			<li><a href="https://saypornplease.com/"> SPP </a></li>
-			<li><a href="https://houseofmega.com/"> House of Mega </a></li>
-			<li><a href="https://mat6tube.com/"> New Awesome Site </a></li>
-            		<li><a href="https://pornfactor.com/"> PornFactor </a></li>
-		</ul>
-	</div>
+    /* ----- Time & Weather Section ----- */
+    .info-section {
+      margin-bottom: 1rem;
+    }
+    .info-section span {
+      font-weight: bold;
+    }
 
-	<div class="box"><h4>Forums For Umm...</h4>
-		<ul>
-			<li><a href="https://reddit.com/r/linuxquestions"> Linux ?'s </a></li>
-			<li><a href="https://reddit.com/r/firefoxcss"> css </a></li>
-			<li><a href="https://reddit.com/r/zsh"> zsh </a></li>
-			<li><a href="https://reddit.com/r/unixporn"> UnixPorn </a></li>
-			<li><a href="https://reddit.com/r/commandline"> Commandline </a></li>
-			<li><a href="https://reddit.com/r/kde"> KD3 </a></li>
-			<li><a href="https://reddit.com/r/startpages"> Startpages </a></li>
-			<li><a href="https://reddit.com/r/Windows11"> Manjaro </a></li>
-			<li><a href="https://reddit.com/u/Diab01ica1"> Profile </a></li>
-			<li><a href="https://reddit.com/r/sharepoint"> SharePoint </a></li>
-			<li><a href="https://reddit.com/r/powershell"> PowerShell </a></li>
-			<li><a href="https://reddit.com/r/opendirectories"> Directories </a></li>
-			<li><a href="https://firefoxcss-store.github.io/"> r/FirefoxCSS Hub </a></li>
-			<li><a href="https://www.reddit-doesnt-like-this.site/2021/01/01/list-of-full-length-porn-tube-websites/"> The GOAT </a></li>
-			<li><a href="https://saidit.net/s/freemediafuckyeah/wiki/index"> FMYA List </a></li>
-			<li><a href="https://old.reddit.com/r/FREEMEDIAHECKYEAH/wiki/download"> FMYA List Alt </a></li>
-			<li><a href="https://www.wikifeet.com/celebs?sort=&fav=1"> WikiFeet </a></li>
-			<li><a href="https://mrotherguy.github.io/firefox-csshacks/"> Dope FF HuB </a></li>
+    /* ----- Quick Links ----- */
+    .quick-links {
+      display: flex;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .quick-links .column {
+      flex: 1;
+    }
+    .quick-links ul {
+      list-style-type: none;
+    }
+    .quick-links li {
+      margin-bottom: 0.5rem;
+    }
+    .quick-links a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .quick-links a:hover {
+      text-decoration: underline;
+    }
 
-			
-		</ul>
-	</div>
+    /* ----- Search Bar ----- */
+    .search-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .search-container select,
+    .search-container input {
+      padding: 0.5rem;
+      border-radius: 4px;
+      border: none;
+    }
+    .search-container button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+    .search-container button:hover {
+      background-color: #555;
+    }
 
+    /* ----- IP Address Display ----- */
+    #ip-address {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
 
+    /* ----- RSS Feed Link ----- */
+    .rss-link {
+      margin-top: 1rem;
+    }
+    .rss-link a {
+      color: #ff0;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
 
-	<div class="sbox"><h4>Natural Selection</h4>
-		<input
-        	 id="search-field"
-       		 type="text"
-       		 name="search-field"
-       		 onkeypress="return search(event)"
-     		 />
-		
-	</div>
+    <!-- Greeting Section -->
+    <div id="greeting">Good morning, Tortiou5! Ready to make moves!?</div>
 
+    <!-- Time & Weather Section -->
+    <div class="info-section">
+      <div>Time (Central US): <span id="time"></span></div>
+      <div>Weather in Schaumburg, IL: <span id="weather"></span></div>
+    </div>
 
-	<div class="box"><h4>Film/Media Maniac</h4>
-		<ul>
-			<li><a href="https://streamm4u.ws/"> Dope #1 </a></li>
-			<li><a href="https://m4uhd.tv/"> Dope #2 </a></li>
-			<li><a href="https://slider.kz/"> Slid3r </a></li>
-			<li><a href="https://filepursuit.com"> FilePursuit </a></li>
-			<li><a href="https://fora.snahp.eu/"> Snahps </a></li>
-			<li><a href="https://azmovies.xyz"> AZMovies </a></li>
-			<li><a href="https://moviefiles.org/"> MovieFiles </a></li>
-			<li><a href="https://realtalksociety.com"> RealTalkSociety </a></li>
-			<li><a href="https://ewasion.github.io/opendirectory-finder/#"> OD Finder </a></li>
-			<li><a href="https://open-directories.reecemercer.dev/"> Directory Searcher </a></li>
-			<li><a href="https://weboasis-repo.github.io/"> WebOasis </a></li>
-			<li><a href="https://soapgate.org/"> Soap2day </a></li>
-			<li><a href="https://mrotherguy.github.io/firefox-csshacks/"> FF Hacks Site </a></li>
-			<li><a href="https://aznude.com/"> AZNude </a></li>
-			<li><a href="https://celebroulette.com/"> CelebRoulette </a></li>
-			<li><a href="https://heroero.com/"> HeroEro </a></li>
-			<li><a href="https://en.loader.to/4//"> YT Downloader </a></li>
-			<li><a href="https://send.vis.ee/"> Lg Fileshare #1 </a></li>
-			<li><a href="https://wormhole.app/"> Lg Fileshare #2 </a></li>
+    <!-- Quick Links -->
+    <div class="quick-links">
+      <div class="column">
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+          <li><a href="#">Link 5</a></li>
+          <li><a href="#">Link 6</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <ul>
+          <li><a href="#">Link 7</a></li>
+          <li><a href="#">Link 8</a></li>
+          <li><a href="#">Link 9</a></li>
+          <li><a href="#">Link 10</a></li>
+          <li><a href="#">Link 11</a></li>
+          <li><a href="#">Link 12</a></li>
+        </ul>
+      </div>
+    </div>
 
-		</ul>
-	</div>
+    <!-- Search Bar -->
+    <div class="search-container">
+      <select id="searchEngine">
+        <option value="google">Google</option>
+        <option value="bing">Bing</option>
+        <option value="duckduckgo">DuckDuckGo</option>
+      </select>
+      <input type="text" id="searchQuery" placeholder="Search..." />
+      <button id="searchBtn">Search</button>
+    </div>
 
+    <!-- IP Address -->
+    <div id="ip-address">Your IP: <span id="ip"></span></div>
 
-	<div class="box"><h4>Missile Anus</h4>
-		<ul>
-			<li><a href="https://wiki.manjaro.org/index.php?title=Main_page"> Manja2r0 Wiki </a></li>
-			<li><a href="https://github.com/tortious/Master_Resources_re_Yar"> My Github Depo </a></li>
-			<li><a href="https://gitlab.com/tortious/master-list-of-resources/blob/master/Arrrrrr%20Resources.md"> My GitLab </a></li>
-			<li><a href="https://github.com/Igglybuff/awesome-piracy"> AwesomePiracy </a></li>
-			<li><a href="https://wallpaperscraft.com/"> WallpapersCraft </a></li>
-			<li><a href="https://hdqwalls.com/"> HDQ Wallpapers </a></li>
-			<li><a href="https://wallpaperaccess.com/"> WallpaperAccess </a></li>
-			<li><a href="https://wallhaven.cc/"> WallHaven </a></li>
-			<li><a href="https://wallpapercave.com/"> WallpaperCave </a></li>
-			<li><a href="https://www.wallpaperflare.com/"> WallpaperFlare </a></li>
-			<li><a href="https://store.kde.org/"> Kde Store </a></li>
-			<li><a href="https://board.jdownloader.org/index.php"> JDL2 Forum </a></li>
-			<li><a href="https://startpages.github.io/"> Startpage List </a></li>
-			<li><a href="https://www.gmx.com/"> GMX Mail </a></li>
-			<li><a href="https://www.gmx.com/"> GMX Mail </a></li>
-			<li><a href="https://mrsharepoint.guru/"> Mr SharePoint </a></li>
-			<li><a href="https://www.sharepointdiary.com/"> SP DIary </a></li>
-			<li><a href="https://www.sharepointmaven.com/"> SharePoint Maven </a></li>
-			<li><a href="https://mailfence.com/sw?type=L&state=0&lf=mailfence"> MailFence </a></li>
-			<li><a href="https://old.protonmail.com/login"> ProtonMail </a></li>
-			
-			
-		</ul>
-	</div>    
-	
-	
-</div>
+    <!-- RSS Feed Link -->
+    <div class="rss-link">
+      <a href="feed.xml" target="_blank">View RSS Feed</a>
+    </div>
+
+  </div>
+
+  <script>
+    /******************************************************
+     * 1) Greeting based on time of day (Central US)
+     ******************************************************/
+    function updateGreeting() {
+      const nowCentral = new Date().toLocaleString("en-US", {
+        timeZone: "America/Chicago",
+        hour12: false,
+        hour: "numeric"
+      });
+      const hour = parseInt(nowCentral, 10);
+      let greetingText = "Good evening"; // default
+
+      if (hour < 12) {
+        greetingText = "Good morning";
+      } else if (hour < 18) {
+        greetingText = "Good afternoon";
+      } else {
+        greetingText = "Good evening";
+      }
+
+      document.getElementById("greeting").textContent = 
+        greetingText + ", Tortiou5! Ready to make moves!?";
+    }
+
+    /******************************************************
+     * 2) Display time in 12-hour format, Central US
+     ******************************************************/
+    function updateTime() {
+      const nowCentral = new Date().toLocaleString("en-US", {
+        timeZone: "America/Chicago",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+        hour12: true
+      });
+      document.getElementById("time").textContent = nowCentral;
+    }
+
+    // Update time every second
+    setInterval(updateTime, 1000);
+    // Update greeting once on page load
+    updateGreeting();
+
+    /******************************************************
+     * 3) Weather for Schaumburg, IL (OpenWeatherMap)
+     ******************************************************/
+    // Replace YOUR_API_KEY with your actual OpenWeatherMap API key
+    const weatherApiKey = "f08ed073c526047a38d4476ec8579131";
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=Schaumburg&units=imperial&appid=${weatherApiKey}`;
+
+    fetch(weatherUrl)
+      .then(response => response.json())
+      .then(data => {
+        if (data && data.main) {
+          const temp = data.main.temp.toFixed(0);
+          const desc = data.weather[0].description;
+          document.getElementById("weather").textContent = `${temp}°F, ${desc}`;
+        } else {
+          document.getElementById("weather").textContent = "Unable to fetch weather.";
+        }
+      })
+      .catch(err => {
+        console.error(err);
+        document.getElementById("weather").textContent = "Error fetching weather.";
+      });
+
+    /******************************************************
+     * 4) 2 Columns of Quick Links with 6 links per column
+     * (Handled in HTML/CSS above)
+     ******************************************************/
+
+    /******************************************************
+     * 5) Custom background image
+     * (Handled in CSS above)
+     ******************************************************/
+
+    /******************************************************
+     * 6) Greeting text (part of #greeting)
+     * (Handled in updateGreeting() above)
+     ******************************************************/
+
+    /******************************************************
+     * 7) Display IP address
+     ******************************************************/
+    fetch("https://api.ipify.org?format=json")
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("ip").textContent = data.ip;
+      })
+      .catch(err => {
+        console.error(err);
+        document.getElementById("ip").textContent = "Error fetching IP.";
+      });
+
+    /******************************************************
+     * 8) Search bar with selectable engines
+     ******************************************************/
+    document.getElementById("searchBtn").addEventListener("click", function() {
+      const engine = document.getElementById("searchEngine").value;
+      const query = document.getElementById("searchQuery").value.trim();
+      if (!query) return;
+
+      let url = "";
+      switch (engine) {
+        case "bing":
+          url = `https://www.bing.com/search?q=${encodeURIComponent(query)}`;
+          break;
+        case "duckduckgo":
+          url = `https://duckduckgo.com/?q=${encodeURIComponent(query)}`;
+          break;
+        case "google":
+        default:
+          url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+          break;
+      }
+      window.open(url, "_blank");
+    });
+  </script>
+</body>
+</html>
 
 
 
