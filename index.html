@@ -89,6 +89,7 @@
       color: #ff0;
       font-size: 1.2rem;
       text-decoration: none;
+      display: block; /* Makes the entire line clickable */
     }
 
     .rss-item a:hover {
@@ -181,8 +182,9 @@
             let link = el.querySelector("link").textContent;
             let pubDate = new Date(el.querySelector("pubDate").textContent).toLocaleDateString("en-US");
 
+            // Ensures links open in a new tab and point directly to the article
             output += `<div class="rss-item">
-                         <a href="${link}" target="_blank">${title}</a>
+                         <a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a>
                          <small>Published: ${pubDate}</small>
                        </div>`;
           });
