@@ -18,13 +18,13 @@
       background-size: cover;
       color: #fff;
       padding: 20px;
-      text-align: center;
     }
 
     /* IP Address - Center Top */
     #ip-address {
       font-size: 1.4rem;
       font-weight: bold;
+      text-align: center;
       margin-bottom: 10px;
     }
 
@@ -33,6 +33,7 @@
       font-size: 2.5rem;
       font-weight: bold;
       font-family: "Georgia", serif;
+      text-align: center;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
       margin-bottom: 20px;
     }
@@ -40,7 +41,7 @@
     /* Quick Links - Left & Right */
     .quick-links {
       position: absolute;
-      top: 20%;
+      top: 15%;
       width: 200px;
       font-size: 1.2rem;
     }
@@ -68,38 +69,58 @@
       text-decoration: underline;
     }
 
-    /* RSS Feed */
+    /* RSS Feed Section */
+    #rss-feed {
+      width: 80%;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 8px;
+      text-align: left;
+    }
+
     #rss-feed h2 {
       font-size: 1.8rem;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     }
 
-    .rss-item {
-      padding: 15px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    .feed-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .feed-item {
+      flex: 1 1 calc(50% - 15px);
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 5px;
       transition: background 0.3s;
     }
 
-    .rss-item:hover {
-      background: rgba(255, 255, 255, 0.1);
+    .feed-item:hover {
+      background: rgba(255, 255, 255, 0.2);
     }
 
-    .rss-item a {
+    .feed-item a {
       color: #ff0;
       font-size: 1.2rem;
+      font-weight: bold;
       text-decoration: none;
-      display: block; /* Makes the entire line clickable */
+      display: block;
+      margin-bottom: 5px;
     }
 
-    .rss-item a:hover {
+    .feed-item a:hover {
       text-decoration: underline;
     }
 
-    .rss-item small {
+    .feed-item small {
       display: block;
       color: #ccc;
-      margin-top: 5px;
+      font-size: 0.9rem;
     }
 
   </style>
@@ -139,7 +160,7 @@
   <!-- RSS Feed Section -->
   <div id="rss-feed">
     <h2>Latest SharePoint & Microsoft 365 News</h2>
-    <div id="feed-content">Loading feed...</div>
+    <div id="feed-content" class="feed-container">Loading feed...</div>
   </div>
 
   <script>
@@ -182,8 +203,8 @@
             let link = el.querySelector("link").textContent;
             let pubDate = new Date(el.querySelector("pubDate").textContent).toLocaleDateString("en-US");
 
-            // Ensures links open in a new tab and point directly to the article
-            output += `<div class="rss-item">
+            // Article box, properly spaced and formatted
+            output += `<div class="feed-item">
                          <a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a>
                          <small>Published: ${pubDate}</small>
                        </div>`;
