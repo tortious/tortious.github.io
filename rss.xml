@@ -1,128 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-
-    <!-- CHANNEL-LEVEL INFO (Your Site) -->
     <title>Tortiou5’s Site</title>
     <link>https://tortious.github.io</link>
-    <description>Aggregated RSS references foramp; Microsoft 365 resources.</description>
-
-    <!-- 1. SharePoint Maven -->
+    <description>An example RSS feed for Tortiou5 site.</description>
+    
     <item>
       <title>SharePoint Maven</title>
-      <description>Feed for SharePoint Maven (Greg Zelfond).</description>
-      <link>https://sharepointmaven.com/feed</link>
-      <pubDate>Thu, 13 Feb 2025 09:00:00 +0000</pubDate>
-      <guid>https://sharepointmaven.com/feed</guid>
+      <description>This is the summary of your first post.</description>
+      <link>https://tortious.github.io/first-post</link>
+      <pubDate>Thu, 01 Jan 2025 12:00:00 +0000</pubDate>
+      <guid>https://tortious.github.io/first-post</guid>
     </item>
-
-    <!-- 2. Mr. SharePoint Guru -->
-    <item>
-      <title>Mr. SharePoint Guru</title>
-      <description>Feed for Mr. SharePoint Guru.</description>
-      <link>https://mrsharepoint.guru/feed</link>
-      <pubDate>Thu, 13 Feb 2025 10:00:00 +0000</pubDate>
-      <guid>https://mrsharepoint.guru/feed</guid>
+     <item>
+      <title>SharePoint Maven</title>
+      <description>This is the summary of your first post.</description>
+      <link>https://tortious.github.io/first-post</link>
+      <pubDate>Thu, 01 Jan 2025 12:00:00 +0000</pubDate>
+      <guid>https://tortious.github.io/first-post</guid>
     </item>
-
-    <!-- 3. Elio Struyf -->
-    <item>
-      <title>Elio Struyf</title>
-      <description>Articles, tips &amp; resources by Elio Struyf.</description>
-      <link>https://www.eliostruyf.com/feed</link>
-      <pubDate>Thu, 13 Feb 2025 11:00:00 +0000</pubDate>
-      <guid>https://www.eliostruyf.com/feed</guid>
+     <item>
+      <title>SharePoint Maven</title>
+      <description>This is the summary of your first post.</description>
+      <link>https://tortious.github.io/first-post</link>
+      <pubDate>Thu, 01 Jan 2025 12:00:00 +0000</pubDate>
+      <guid>https://tortious.github.io/first-post</guid>
     </item>
-
-    <!-- 4. Andrew Connell -->
-    <item>
-      <title>Andrew Connell</title>
-      <description>SharePoint &amp; Office 365 developer content by Andrew Connell.</description>
-      <link>https://www.andrewconnell.com/feed</link>
-      <pubDate>Thu, 13 Feb 2025 12:00:00 +0000</pubDate>
-      <guid>https://www.andrewconnell.com/feed</guid>
+     <item>
+      <title>SharePoint Maven</title>
+      <description>This is the summary of your first post.</description>
+      <link>https://tortious.github.io/first-post</link>
+      <pubDate>Thu, 01 Jan 2025 12:00:00 +0000</pubDate>
+      <guid>https://tortious.github.io/first-post</guid>
     </item>
-
-    <!-- 5. Microsoft Docs (SPFx) -->
-    <item>
-      <title>SharePoint Framework Docs</title>
-      <description>Microsoft’s official SPFx documentation.</description>
-      <link>https://learn.microsoft.com/en-us/sharepoint/dev/spfx/</link>
-      <pubDate>Thu, 13 Feb 2025 13:00:00 +0000</pubDate>
-      <guid>https://learn.microsoft.com/en-us/sharepoint/dev/spfx/</guid>
+     <item>
+      <title>SharePoint Maven</title>
+      <description>This is the summary of your first post.</description>
+      <link>https://tortious.github.io/first-post</link>
+      <pubDate>Thu, 01 Jan 2025 12:00:00 +0000</pubDate>
+      <guid>https://tortious.github.io/first-post</guid>
     </item>
-
-    <!-- 6. N8D Blog -->
-    <item>
-      <title>N8D.at Blog</title>
-      <description>Blog feed by Stefan Bauer (n8d.at).</description>
-      <link>https://n8d.at/blog/feed</link>
-      <pubDate>Thu, 13 Feb 2025 14:00:00 +0000</pubDate>
-      <guid>https://n8d.at/blog/feed</guid>
+     <item>
+      <title>SharePoint Maven</title>
+      <description>This is the summary of your first post.</description>
+      <link>https://tortious.github.io/first-post</link>
+      <pubDate>Thu, 01 Jan 2025 12:00:00 +0000</pubDate>
+      <guid>https://tortious.github.io/first-post</guid>
     </item>
-
-    <!-- 7. SharePoint Diary -->
-    <item>
-      <title>SharePoint Diary</title>
-      <description>SharePoint tips &amp; resources.</description>
-      <link>https://sharepointdiary.com/feed</link>
-      <pubDate>Thu, 13 Feb 2025 15:00:00 +0000</pubDate>
-      <guid>https://sharepointdiary.com/feed</guid>
+     <item>
+      <title>SharePoint Maven</title>
+      <description>This is the summary of your first post.</description>
+      <link>https://tortious.github.io/first-post</link>
+      <pubDate>Thu, 01 Jan 2025 12:00:00 +0000</pubDate>
+      <guid>https://tortious.github.io/first-post</guid>
     </item>
-
-    <!-- 8. The Chris Kent -->
-    <item>
-      <title>The Chris Kent</title>
-      <description>SharePoint, Office 365 &amp; more by Chris Kent.</description>
-      <link>https://thechriskent.com/feed</link>
-      <pubDate>Thu, 13 Feb 2025 16:00:00 +0000</pubDate>
-      <guid>https://thechriskent.com/feed</guid>
+     <item>
+      <title>SharePoint Maven</title>
+      <description>This is the summary of your first post.</description>
+      <link>https://tortious.github.io/first-post</link>
+      <pubDate>Thu, 01 Jan 2025 12:00:00 +0000</pubDate>
+      <guid>https://tortious.github.io/first-post</guid>
     </item>
-
-    <!-- 9. SharePains -->
-    <item>
-      <title>SharePains</title>
-      <description>Power Platform &amp; SharePoint solutions by Pieter Veenstra.</description>
-      <link>https://sharepains.com/feed</link>
-      <pubDate>Thu, 13 Feb 2025 17:00:00 +0000</pubDate>
-      <guid>https://sharepains.com/feed</guid>
+     <item>
+      <title>SharePoint Maven</title>
+      <description>This is the summary of your first post.</description>
+      <link>https://tortious.github.io/first-post</link>
+      <pubDate>Thu, 01 Jan 2025 12:00:00 +0000</pubDate>
+      <guid>https://tortious.github.io/first-post</guid>
     </item>
-
-    <!-- 10. SPGuides -->
-    <item>
-      <title>SPGuides</title>
-      <description>SharePoint tutorials and guides.</description>
-      <link>https://www.spguides.com/feed</link>
-      <pubDate>Thu, 13 Feb 2025 18:00:00 +0000</pubDate>
-      <guid>https://www.spguides.com/feed</guid>
+     <item>
+      <title>SharePoint Maven</title>
+      <description>This is the summary of your first post.</description>
+      <link>https://tortious.github.io/first-post</link>
+      <pubDate>Thu, 01 Jan 2025 12:00:00 +0000</pubDate>
+      <guid>https://tortious.github.io/first-post</guid>
     </item>
-
-    <!-- 11. Collab365 -->
-    <item>
-      <title>Collab365</title>
-      <description>Microsoft 365 community events &amp; blog.</description>
-      <link>https://collab365.com/feed</link>
-      <pubDate>Thu, 13 Feb 2025 19:00:00 +0000</pubDate>
-      <guid>https://collab365.com/feed</guid>
+     <item>
+      <title>SharePoint Maven</title>
+      <description>This is the summary of your first post.</description>
+      <link>https://tortious.github.io/first-post</link>
+      <pubDate>Thu, 01 Jan 2025 12:00:00 +0000</pubDate>
+      <guid>https://tortious.github.io/first-post</guid>
     </item>
-
-    <!-- 12. WonderLaura -->
-    <item>
-      <title>WonderLaura</title>
-      <description>Laura Rogers on SharePoint, Power Apps &amp; Power Automate.</description>
-      <link>https://wonderlaura.com/feed</link>
-      <pubDate>Thu, 13 Feb 2025 20:00:00 +0000</pubDate>
-      <guid>https://wonderlaura.com/feed</guid>
-    </item>
-
-    <!-- 13. Power Automate (Flow) Blog -->
-    <item>
-      <title>Power Automate (Flow) Blog</title>
-      <description>Blog posts for Microsoft Power Automate (Flow).</description>
-      <link>https://flow.microsoft.com/en-us/blog/feed</link>
-      <pubDate>Thu, 13 Feb 2025 21:00:00 +0000</pubDate>
-      <guid>https://flow.microsoft.com/en-us/blog/feed</guid>
-    </item>
-
+    <!-- Add more <item> blocks as needed for your posts/pages. -->
+    
   </channel>
 </rss>
