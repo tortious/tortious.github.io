@@ -1,227 +1,123 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Tortiou5's Page</title>
-  <style>
-    /* Basic Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    /* Full-screen layout */
-    body {
-      font-family: Arial, sans-serif;
-      background: url('bonsai_tree_plant_143204_1920x1080.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      padding: 20px;
-    }
-
-    /* IP Address - Center Top */
-    #ip-address {
-      font-size: 1.4rem;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    /* Welcome Message */
-    #greeting {
-      font-size: 2.5rem;
-      font-weight: bold;
-      font-family: "Georgia", serif;
-      text-align: center;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-      margin-bottom: 20px;
-    }
-
-    /* Quick Links - Left & Right */
-    .quick-links {
-      position: absolute;
-      top: 15%;
-      width: 200px;
-      font-size: 1.2rem;
-    }
-    
-    .left-links {
-      left: 20px;
-      text-align: left;
-    }
-    
-    .right-links {
-      right: 20px;
-      text-align: right;
-    }
-    
-    .quick-links ul {
-      list-style-type: none;
-    }
-
-    .quick-links a {
-      color: #ff0;
-      text-decoration: none;
-    }
-
-    .quick-links a:hover {
-      text-decoration: underline;
-    }
-
-    /* RSS Feed Section */
-    #rss-feed {
-      width: 80%;
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 8px;
-      text-align: left;
-    }
-
-    #rss-feed h2 {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    }
-
-    .feed-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .feed-item {
-      flex: 1 1 calc(50% - 15px);
-      background: rgba(255, 255, 255, 0.1);
-      padding: 15px;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
-
-    .feed-item:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
-
-    .feed-item a {
-      color: #ff0;
-      font-size: 1.2rem;
-      font-weight: bold;
-      text-decoration: none;
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    .feed-item a:hover {
-      text-decoration: underline;
-    }
-
-    .feed-item small {
-      display: block;
-      color: #ccc;
-      font-size: 0.9rem;
-    }
-
-  </style>
-</head>
-<body>
-  
-  <!-- IP Address at the Top -->
-  <div id="ip-address">Your IP: <span id="ip">Loading...</span></div>
-
-  <!-- Centered Welcome Message -->
-  <div id="greeting">Good morning, Tortiou5! Ready to make moves!?</div>
-
-  <!-- Left Quick Links -->
-  <div class="quick-links left-links">
-    <ul>
-      <li><a href="#">Link 1</a></li>
-      <li><a href="#">Link 2</a></li>
-      <li><a href="#">Link 3</a></li>
-      <li><a href="#">Link 4</a></li>
-      <li><a href="#">Link 5</a></li>
-      <li><a href="#">Link 6</a></li>
-    </ul>
-  </div>
-
-  <!-- Right Quick Links -->
-  <div class="quick-links right-links">
-    <ul>
-      <li><a href="#">Link 7</a></li>
-      <li><a href="#">Link 8</a></li>
-      <li><a href="#">Link 9</a></li>
-      <li><a href="#">Link 10</a></li>
-      <li><a href="#">Link 11</a></li>
-      <li><a href="#">Link 12</a></li>
-    </ul>
-  </div>
-
-  <!-- RSS Feed Section -->
-  <div id="rss-feed">
-    <h2>Latest SharePoint & Microsoft 365 News</h2>
-    <div id="feed-content" class="feed-container">Loading feed...</div>
-  </div>
-
-  <script>
-    // Fetch & Display IP Address
-    fetch("https://api.ipify.org?format=json")
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById("ip").textContent = data.ip;
-      });
-
-    // Update Greeting
-    function updateGreeting() {
-      const hour = new Date().getHours();
-      let greetingText = "Good evening";
-
-      if (hour < 12) {
-        greetingText = "Good morning";
-      } else if (hour < 18) {
-        greetingText = "Good afternoon";
-      }
-
-      document.getElementById("greeting").textContent = `${greetingText}, Tortiou5! Ready to make moves!?`;
-    }
-
-    updateGreeting();
-
-    // Fetch RSS Feed & Update Automatically
-    const feedUrl = "https://tortious.github.io/rss.xml";
-
-    function loadRSSFeed() {
-      fetch(feedUrl)
-        .then(response => response.text())
-        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-        .then(data => {
-          let items = data.querySelectorAll("item");
-          let output = "";
-
-          items.forEach((el) => {
-            let title = el.querySelector("title").textContent;
-            let link = el.querySelector("link").textContent;
-            let pubDate = new Date(el.querySelector("pubDate").textContent).toLocaleDateString("en-US");
-
-            // Article box, properly spaced and formatted
-            output += `<div class="feed-item">
-                         <a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a>
-                         <small>Published: ${pubDate}</small>
-                       </div>`;
-          });
-
-          document.getElementById("feed-content").innerHTML = output;
-        })
-        .catch(error => {
-          console.error("Error loading RSS feed:", error);
-          document.getElementById("feed-content").innerHTML = "Failed to load feed.";
-        });
-    }
-
-    // Initial Load & Auto Refresh Every 5 Minutes
-    loadRSSFeed();
-    setInterval(loadRSSFeed, 300000);
-
-  </script>
-</body>
-</html>
+	<link href='http://fonts.googleapis.com/css?family=Lobster|Roboto|Roboto:300|Roboto+Condensed' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Start</title>
+	<script>
+	window.addEventListener('preload', function load() {
+	window.removeEventListener('preload', load, false);
+	document.body.classList.remove('preload');
+	}, false);
+	</script>
+</head> 
+<body class="preload">
+<h1>~Get Yo Rocks Off~</h1>
+<div id="boxes">
+	
+	<div class="box"><h4>T&A For Days</h4>
+		<ul>
+			<li><a href="https://biqle.ru"> Biqle </a></li>
+			<li><a href="https://eporner.com"> ePron </a></li>
+			<li><a href="http://pornissimo.org"> Pornissimo </a></li>
+            		<li><a href="http://porno365.space/"> Yearround-V3 </a></li>
+			<li><a href="https://spankbang.com"> Spanky </a></li>
+			<li><a href="https://hotpornfile.org"> HotPornFIle </a></li>
+			<li><a href="https://hqporner.com"> HPronner </a></li>
+			<li><a href="https://xfantazy.com"> xFantazy </a></li>
+			<li><a href="https://sxyprn.com"> sxyprn </a></li>
+			<li><a href="https://0xxx.ws"> 0xxx </a></li>  
+			<li><a href="https://www.ixxx.com/"> iXXX </a></li>
+			<li><a href="https://pornmz.com/"> PornMZ </a></li>
+			<li><a href="https://noodlemagazine/"> DaftS3x  </a></li>
+			<li><a href="https://goodporn.to/"> G00dpron </a></li>
+			<!-- <li><a href="https://mangovideo.pw/"> MangoVideo </a></li> -->
+			<li><a href="https://pornobae.com/"> P0rn0Ba3 </a></li>
+			<li><a href="https://saypornplease.com/"> SPP </a></li>
+			<li><a href="https://houseofmega.com/"> House of Mega </a></li>
+			<li><a href="https://mat6tube.com/"> New Awesome Site </a></li>
+            		<li><a href="https://pornfactor.com/"> PornFactor </a></li>
+		</ul>
+	</div>
+	<div class="box"><h4>Forums For Umm...</h4>
+		<ul>
+			<li><a href="https://reddit.com/r/linuxquestions"> Linux ?'s </a></li>
+			<li><a href="https://reddit.com/r/firefoxcss"> css </a></li>
+			<li><a href="https://reddit.com/r/zsh"> zsh </a></li>
+			<li><a href="https://reddit.com/r/unixporn"> UnixPorn </a></li>
+			<li><a href="https://reddit.com/r/commandline"> Commandline </a></li>
+			<li><a href="https://reddit.com/r/kde"> KD3 </a></li>
+			<li><a href="https://reddit.com/r/startpages"> Startpages </a></li>
+			<li><a href="https://reddit.com/r/Windows11"> Manjaro </a></li>
+			<li><a href="https://reddit.com/u/Diab01ica1"> Profile </a></li>
+			<li><a href="https://reddit.com/r/sharepoint"> SharePoint </a></li>
+			<li><a href="https://reddit.com/r/powershell"> PowerShell </a></li>
+			<li><a href="https://reddit.com/r/opendirectories"> Directories </a></li>
+			<li><a href="https://firefoxcss-store.github.io/"> r/FirefoxCSS Hub </a></li>
+			<li><a href="https://www.reddit-doesnt-like-this.site/2021/01/01/list-of-full-length-porn-tube-websites/"> The GOAT </a></li>
+			<li><a href="https://saidit.net/s/freemediafuckyeah/wiki/index"> FMYA List </a></li>
+			<li><a href="https://old.reddit.com/r/FREEMEDIAHECKYEAH/wiki/download"> FMYA List Alt </a></li>
+			<li><a href="https://www.wikifeet.com/celebs?sort=&fav=1"> WikiFeet </a></li>
+			<li><a href="https://mrotherguy.github.io/firefox-csshacks/"> Dope FF HuB </a></li>
+			
+		</ul>
+	</div>
+	<div class="sbox"><h4>Natural Selection</h4>
+		<input
+        	 id="search-field"
+       		 type="text"
+       		 name="search-field"
+       		 onkeypress="return search(event)"
+     		 />
+		
+	</div>
+	<div class="box"><h4>Film/Media Maniac</h4>
+		<ul>
+			<li><a href="https://streamm4u.ws/"> Dope #1 </a></li>
+			<li><a href="https://m4uhd.tv/"> Dope #2 </a></li>
+			<li><a href="https://slider.kz/"> Slid3r </a></li>
+			<li><a href="https://filepursuit.com"> FilePursuit </a></li>
+			<li><a href="https://fora.snahp.eu/"> Snahps </a></li>
+			<li><a href="https://azmovies.xyz"> AZMovies </a></li>
+			<li><a href="https://moviefiles.org/"> MovieFiles </a></li>
+			<li><a href="https://realtalksociety.com"> RealTalkSociety </a></li>
+			<li><a href="https://ewasion.github.io/opendirectory-finder/#"> OD Finder </a></li>
+			<li><a href="https://open-directories.reecemercer.dev/"> Directory Searcher </a></li>
+			<li><a href="https://weboasis-repo.github.io/"> WebOasis </a></li>
+			<li><a href="https://soapgate.org/"> Soap2day </a></li>
+			<li><a href="https://mrotherguy.github.io/firefox-csshacks/"> FF Hacks Site </a></li>
+			<li><a href="https://aznude.com/"> AZNude </a></li>
+			<li><a href="https://celebroulette.com/"> CelebRoulette </a></li>
+			<li><a href="https://heroero.com/"> HeroEro </a></li>
+			<li><a href="https://en.loader.to/4//"> YT Downloader </a></li>
+			<li><a href="https://send.vis.ee/"> Lg Fileshare #1 </a></li>
+			<li><a href="https://wormhole.app/"> Lg Fileshare #2 </a></li>
+		</ul>
+	</div>
+	<div class="box"><h4>Missile Anus</h4>
+		<ul>
+			<li><a href="https://wiki.manjaro.org/index.php?title=Main_page"> Manja2r0 Wiki </a></li>
+			<li><a href="https://github.com/tortious/Master_Resources_re_Yar"> My Github Depo </a></li>
+			<li><a href="https://gitlab.com/tortious/master-list-of-resources/blob/master/Arrrrrr%20Resources.md"> My GitLab </a></li>
+			<li><a href="https://github.com/Igglybuff/awesome-piracy"> AwesomePiracy </a></li>
+			<li><a href="https://wallpaperscraft.com/"> WallpapersCraft </a></li>
+			<li><a href="https://hdqwalls.com/"> HDQ Wallpapers </a></li>
+			<li><a href="https://wallpaperaccess.com/"> WallpaperAccess </a></li>
+			<li><a href="https://wallhaven.cc/"> WallHaven </a></li>
+			<li><a href="https://wallpapercave.com/"> WallpaperCave </a></li>
+			<li><a href="https://www.wallpaperflare.com/"> WallpaperFlare </a></li>
+			<li><a href="https://store.kde.org/"> Kde Store </a></li>
+			<li><a href="https://board.jdownloader.org/index.php"> JDL2 Forum </a></li>
+			<li><a href="https://startpages.github.io/"> Startpage List </a></li>
+			<li><a href="https://www.gmx.com/"> GMX Mail </a></li>
+			<li><a href="https://www.gmx.com/"> GMX Mail </a></li>
+			<li><a href="https://mrsharepoint.guru/"> Mr SharePoint </a></li>
+			<li><a href="https://www.sharepointdiary.com/"> SP DIary </a></li>
+			<li><a href="https://www.sharepointmaven.com/"> SharePoint Maven </a></li>
+			<li><a href="https://mailfence.com/sw?type=L&state=0&lf=mailfence"> MailFence </a></li>
+			<li><a href="https://old.protonmail.com/login"> ProtonMail </a></li>
+			
+			
+		</ul>
+	</div>    
+	
+	
+</div>
