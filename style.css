@@ -194,3 +194,36 @@ input:hover, input:focus {
   margin-bottom: 1em;
   text-align: center;
 }
+
+#rss-container {
+  margin-top: 20px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  text-align: left;
+}
+
+#rss-feed {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+#rss-feed li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+#rss-feed li a {
+  color: #EFA3EE;
+  text-decoration: none;
+  display: block;
+}
+
+#rss-feed li a:hover {
+  color: #FBB269;
+  text-decoration: underline;
+}
