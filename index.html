@@ -7,14 +7,15 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto|Roboto:300|Roboto+Condensed" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        document.body.classList.remove('preload');
-    });
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.remove('preload');
+        });
     </script>
 </head>
 <body class="preload">
     <h1>~Get Yo Rocks Off~</h1>
     <div id="boxes">
+
         <div class="box">
             <h4>T&A For Days</h4>
             <ul>
@@ -27,16 +28,11 @@
                 <li><a href="https://hqporner.com"> HPronner </a></li>
                 <li><a href="https://xfantazy.com"> xFantazy </a></li>
                 <li><a href="https://sxyprn.com"> sxyprn </a></li>
-                <li><a href="https://0xxx.ws"> 0xxx </a></li>  
+                <li><a href="https://0xxx.ws"> 0xxx </a></li>
                 <li><a href="https://www.ixxx.com/"> iXXX </a></li>
                 <li><a href="https://pornmz.com/"> PornMZ </a></li>
                 <li><a href="https://noodlemagazine/"> DaftS3x  </a></li>
                 <li><a href="https://goodporn.to/"> G00dpron </a></li>
-                <li><a href="https://pornobae.com/"> P0rn0Ba3 </a></li>
-                <li><a href="https://saypornplease.com/"> SPP </a></li>
-                <li><a href="https://houseofmega.com/"> House of Mega </a></li>
-                <li><a href="https://mat6tube.com/"> New Awesome Site </a></li>
-                <li><a href="https://pornfactor.com/"> PornFactor </a></li>
             </ul>
         </div>
 
@@ -52,9 +48,6 @@
                 <li><a href="https://reddit.com/r/startpages"> Startpages </a></li>
                 <li><a href="https://reddit.com/r/Windows11"> Manjaro </a></li>
                 <li><a href="https://reddit.com/u/Diab01ica1"> Profile </a></li>
-                <li><a href="https://reddit.com/r/sharepoint"> SharePoint </a></li>
-                <li><a href="https://reddit.com/r/powershell"> PowerShell </a></li>
-                <li><a href="https://reddit.com/r/opendirectories"> Directories </a></li>
             </ul>
         </div>
 
@@ -62,7 +55,7 @@
             <h4>Natural Selection</h4>
             <input id="search-field" type="text" name="search-field" onkeypress="return search(event)" />
 
-            <!-- RSS Feed Section (Inserted Below the Search Bar) -->
+            <!-- RSS Feed Section -->
             <div id="rss-container">
                 <h4>Latest Updates</h4>
                 <ul id="rss-feed"></ul>
@@ -89,66 +82,38 @@
                 <li><a href="https://github.com/Igglybuff/awesome-piracy"> AwesomePiracy </a></li>
                 <li><a href="https://store.kde.org/"> Kde Store </a></li>
                 <li><a href="https://board.jdownloader.org/index.php"> JDL2 Forum </a></li>
-                <li><a href="https://startpages.github.io/"> Startpage List </a></li>
-                <li><a href="https://www.gmx.com/"> GMX Mail </a></li>
-                <li><a href="https://old.protonmail.com/login"> ProtonMail </a></li>
             </ul>
         </div>
     </div>
 
-    <div id="rss-feed"></div>
+    <script>
+        async function loadRSS() {
+            const rssUrl = `https://api.rss2json.com/v1/api.json?rss_url=https://tortious.github.io/feed.xml`;
 
-<script>
-  async function fetchRSS() {
-      const url = 'https://api.rss2json.com/v1/api.json?rss_url=https://news.ycombinator.com/rss'; // Replace with any RSS feed URL
-      try {
-          const response = await fetch(url);
-          const data = await response.json();
-          let output = "<h3>Latest News</h3><ul>";
+            try {
+                const response = await fetch(rssUrl);
+                const data = await response.json();
+                const feedContainer = document.getElementById("rss-feed");
+                feedContainer.innerHTML = '';
 
-          data.items.slice(0, 5).forEach(item => { // Limit to 5 items
-              output += `<li><a href="${item.link}" target="_blank">${item.title}</a></li>`;
-          });
+                data.items.slice(0, 5).forEach(item => {
+                    const listItem = document.createElement("li");
+                    listItem.innerHTML = `
+                        <a href="${item.link}" target="_blank">
+                            <strong>${item.title}</strong> <br>
+                            <small>${new Date(item.pubDate).toLocaleDateString()}</small> <br>
+                            ${item.description}
+                        </a>
+                    `;
+                    feedContainer.appendChild(listItem);
+                });
+            } catch (error) {
+                console.error("Error loading RSS feed:", error);
+                document.getElementById("rss-feed").innerHTML = "Failed to load RSS feed.";
+            }
+        }
 
-          output += "</ul>";
-          document.getElementById("rss-feed").innerHTML = output;
-      } catch (error) {
-          document.getElementById("rss-feed").innerHTML = "Failed to load RSS feed.";
-      }
-  }
-
-  fetchRSS();
-</script>
-    <!-- JavaScript to Load RSS Feed -->
-   <script>
-  async function loadRSS() {
-      const rssUrl = `https://api.rss2json.com/v1/api.json?rss_url=https://tortious.github.io/rss.xml`;
-
-      try {
-          const response = await fetch(rssUrl);
-          const data = await response.json();
-          const feedContainer = document.getElementById("rss-feed");
-          feedContainer.innerHTML = '';
-
-          data.items.slice(0, 5).forEach(item => {
-              const listItem = document.createElement("li");
-              listItem.innerHTML = `
-                  <a href="${item.link}" target="_blank">
-                      <strong>${item.title}</strong> <br>
-                      <small>${new Date(item.pubDate).toLocaleDateString()}</small> <br>
-                      ${item.description}
-                  </a>
-              `;
-              feedContainer.appendChild(listItem);
-          });
-      } catch (error) {
-          console.error("Error loading RSS feed:", error);
-          document.getElementById("rss-feed").innerHTML = "Failed to load RSS feed.";
-      }
-  }
-
-  document.addEventListener("DOMContentLoaded", loadRSS);
-  </script>
-
+        document.addEventListener("DOMContentLoaded", loadRSS);
+    </script>
 </body>
 </html>
