@@ -99,7 +99,7 @@
     <!-- JavaScript to Load RSS Feed -->
     <script>
         async function loadRSS() {
-            const rssUrl = 'rss.xml'; // Assuming RSS file is local; update if hosted externally
+            const rssUrl = 'https://tortious.github.io/rss.xml'; // Assuming RSS file is local; update if hosted externally
             try {
                 const response = await fetch(rssUrl);
                 const text = await response.text();
